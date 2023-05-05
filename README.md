@@ -765,19 +765,16 @@ for filename in filenames:
 
     inflammation-01.csv
 
-
-
-![png](output_2_1.png)
+![output_2_1 1](https://user-images.githubusercontent.com/132395814/236537951-aa82ecae-11f5-4efa-9603-d0d7bb3e82ed.png)
 
 
     inflammation-02.csv
 
-
-
-![png](output_2_3.png)
+![output_2_3 1](https://user-images.githubusercontent.com/132395814/236537846-7cfa74ae-5e5b-4e0b-945c-229f16412dbe.png)
 
 
     inflammation-03.csv
 
+![output_2_5 1](https://user-images.githubusercontent.com/132395814/236537671-1c1382c4-8319-4c28-903b-468045130698.png)
 
-![png](output_2_5.png)
+
