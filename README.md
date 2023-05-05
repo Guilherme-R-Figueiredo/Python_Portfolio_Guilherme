@@ -390,8 +390,7 @@ matplotlib.pyplot.show()
 ```
 
 
-![png](output_1_0.png)
-
+![output_1_0 1](https://user-images.githubusercontent.com/132395814/236538651-68df1e7f-e5b1-4a25-9cdb-aea64a0088cb.png)
 
 
 ```python
@@ -402,7 +401,8 @@ matplotlib.pyplot.show()
 ```
 
 
-![png](output_2_0.png)
+![output_2_0 1](https://user-images.githubusercontent.com/132395814/236538888-4773c932-ede7-400b-bf43-94302ffc7774.png)
+
 
 
 
@@ -412,7 +412,7 @@ matplotlib.pyplot.show()
 ```
 
 
-![png](output_3_0.png)
+![output_3_0 1](https://user-images.githubusercontent.com/132395814/236539003-6152d0e2-ad97-459a-aab7-2f25fffc26bd.png)
 
 
 
@@ -422,7 +422,7 @@ matplotlib.pyplot.show()
 ```
 
 
-![png](output_4_0.png)
+![output_4_0 1](https://user-images.githubusercontent.com/132395814/236539121-34d75b09-f31b-4e78-9448-21b72cb548e4.png)
 
 
 
@@ -449,7 +449,7 @@ matplotlib.pyplot.show()
 ```
 
 
-![png](output_5_0.png)
+![output_5_0 1](https://user-images.githubusercontent.com/132395814/236539269-de647067-5af4-4829-adf5-ff8b06728587.png)
 
 
 ## This code corresponds to storing values in lists
