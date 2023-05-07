@@ -1,7 +1,7 @@
 # Python_Portfolio_Guilherme
 This is the portfolio of python code that I learned during Grad Bioinformatics Python (MSNT 657-V84)
 
-## Jupyter Notebooks
+## 1. Jupyter Notebooks
 
 ### This code represents part 1 and 2 on how to use Jupyter Notebooks
 
@@ -452,7 +452,7 @@ fig.tight_layout()
 ```
 
 
-## Python Fundamentals
+## 2. Python Fundamentals
 
 ### This code shows that Python can be used as a calculator, and it is able to save different types of variables
 
@@ -590,7 +590,7 @@ print ('weight in kilograms is now:', weight_kg)
     weight in kilograms is now: 65.0
 
 
-## Analyzing Patient Data
+## 3. Analyzing Patient Data
 
 ### This code represents Part 1 and 2, and shows inflammation data from multiple patients
 
@@ -903,7 +903,7 @@ matplotlib.pyplot.show()
 ![output_5_0 1](https://user-images.githubusercontent.com/132395814/236539269-de647067-5af4-4829-adf5-ff8b06728587.png)
 
 
-## Lists
+## 4. Lists
 
 ### This code explains how to store values in Lists
 
@@ -1055,7 +1055,7 @@ print('Omitting ending index:', sond)
     Using len() to get last entry: ['sep', 'oct', 'nov', 'dec']
     Omitting ending index: ['sep', 'oct', 'nov', 'dec']
 
-## Loops
+## 5. Loops
 
 ### This code shows how to use Loops. There is an error code in this section, only to show what would happen if we request an index that is out of the range of a list
 
@@ -1169,7 +1169,7 @@ print(len(name))
     3
 
 
-## Multiple Files
+## 6. Multiple Files
 
 ### This code demonstrates how we can work with multiples files easier
 
