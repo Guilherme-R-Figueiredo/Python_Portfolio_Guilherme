@@ -1576,97 +1576,96 @@ for filename in filenames:
     inflammation-01.csv
 
 
-
-![png](output_3_1.png)
+![output_3_1 1](https://user-images.githubusercontent.com/132395814/236734657-ee07e12a-b17c-4cd8-ade9-6be1e7c84ec9.png)
 
 
     Suspicious looking maxima!
+    
+    
     inflammation-02.csv
 
 
-
-![png](output_3_3.png)
-
+![output_3_3 1](https://user-images.githubusercontent.com/132395814/236734697-a20d11ec-5cf5-43b1-b08e-d8df4f708b5e.png)
 
     Suspicious looking maxima!
+    
+    
     inflammation-03.csv
 
 
-
-![png](output_3_5.png)
-
+![output_3_5 1](https://user-images.githubusercontent.com/132395814/236734739-a7c36f54-c3cb-4598-aef5-b34e72d80b20.png)
 
     Minima add up to zero!
+    
+    
     inflammation-04.csv
 
 
-
-![png](output_3_7.png)
-
+![output_3_7 1](https://user-images.githubusercontent.com/132395814/236734790-88a1c2d8-2833-4421-a523-752ef69eab53.png)
 
     Suspicious looking maxima!
+    
+    
     inflammation-05.csv
 
 
-
-![png](output_3_9.png)
-
+![output_3_9 1](https://user-images.githubusercontent.com/132395814/236734901-ff009465-c425-471a-b25b-ad375b11a0e2.png)
 
     Suspicious looking maxima!
+    
+    
     inflammation-06.csv
 
 
-
-![png](output_3_11.png)
-
+![output_3_11 1](https://user-images.githubusercontent.com/132395814/236734832-59b95df8-043d-4601-86b4-7d3bb11ad35c.png)
 
     Suspicious looking maxima!
+    
+    
     inflammation-07.csv
 
 
-
-![png](output_3_13.png)
-
+![output_3_13 1](https://user-images.githubusercontent.com/132395814/236734943-01f7df93-29b6-434a-a505-557a5cecf0a8.png)
 
     Suspicious looking maxima!
+    
+    
     inflammation-08.csv
 
 
-
-![png](output_3_15.png)
-
+![output_3_15 1](https://user-images.githubusercontent.com/132395814/236735126-60238c0f-57fe-4c54-b8de-079e189f8bc0.png)
 
     Minima add up to zero!
+    
+    
     inflammation-09.csv
 
 
-
-![png](output_3_17.png)
-
+![output_3_17 1](https://user-images.githubusercontent.com/132395814/236735204-f2995b4a-baf6-4d04-a190-3b84a9660063.png)
 
     Suspicious looking maxima!
+    
+    
     inflammation-10.csv
 
 
-
-![png](output_3_19.png)
-
+![output_3_19 1](https://user-images.githubusercontent.com/132395814/236735246-475dd5ba-a189-4d37-a034-7822b29f3d51.png)
 
     Suspicious looking maxima!
+    
+    
     inflammation-11.csv
 
 
-
-![png](output_3_21.png)
-
+![output_3_21 1](https://user-images.githubusercontent.com/132395814/236735288-61179665-eefc-4b7d-bd05-c427adae04ed.png)
 
     Minima add up to zero!
+    
+    
     inflammation-12.csv
 
 
-
-![png](output_3_23.png)
-
+![output_3_23 1](https://user-images.githubusercontent.com/132395814/236735341-001ddab8-c898-49ab-89e7-0e36f2a63b38.png)
 
     Suspicious looking maxima!
 
