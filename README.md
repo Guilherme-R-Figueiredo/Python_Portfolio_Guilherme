@@ -1233,3 +1233,131 @@ for filename in filenames:
 ![output_2_5 1](https://user-images.githubusercontent.com/132395814/236537671-1c1382c4-8319-4c28-903b-468045130698.png)
 
 
+## 7. Making Choices
+
+### This code represents part 1
+
+```python
+num = 37
+if num > 100:
+    print('greater')
+else:
+    print ('not greater')
+print ('done')
+```
+
+    not greater
+    done
+
+
+
+```python
+num = 53
+print('before conditional...')
+if num > 100:
+    print(num, 'is greater than 100')
+print('... after conditional')
+```
+
+    before conditional...
+    ... after conditional
+
+
+
+```python
+num = 14
+
+if num > 0:
+    print(num, 'is positive')
+elif num == 0:
+    print(num, 'is zero')
+else:
+    print(num, 'is negative')
+```
+
+    14 is positive
+
+
+
+```python
+if (1 > 0) and (-1 >= 0):
+    print('both parts are true')
+else:
+    print('at least one part is false')
+```
+
+    at least one part is false
+
+
+
+```python
+if (1 > 0) or (-1 >= 0):
+    print('at least one part is true')
+else:
+    print('both of these are false')
+```
+
+    at least one part is true
+
+### This code represents part 2
+
+```python
+import numpy
+```
+
+
+```python
+data = numpy.loadtxt(fname = 'inflammation-01.csv', delimiter = ',')
+```
+
+
+```python
+max_inflammation_0 = numpy.amax (data, axis = 0)[0]
+```
+
+
+```python
+max_inflammation_20 = numpy.amax(data, axis = 0)[20]
+
+if max_inflammation_0 == 0 and max_inflammation_20 == 20:
+    print('Suspicious looking maxima!')
+```
+
+    Suspicious looking maxima!
+
+
+
+```python
+max_inflammation_20 = numpy.amax(data, axis = 0)[20]
+
+if max_inflammation_0 == 0 and max_inflammation_20 == 20:
+    print('Suspicious looking maxima!')
+
+elif numpy.sum(numpy.amin(data, axis = 0)) == 0:
+    print('Minima add up to zero!')
+    
+else:
+    print('Seems OK!')
+```
+
+    Suspicious looking maxima!
+
+
+
+```python
+data = numpy.loadtxt(fname = 'inflammation-03.csv', delimiter=',')
+
+max_inflammation_0 = numpy.amax(data, axis = 0)[0]
+
+max_inflammation_20 = numpy.amax(data, axis = 0)[20]
+
+if max_inflammation_0 == 0 and max_inflammation_20 == 20:
+    print('Suspicious looking maxima!')
+elif numpy.sum(numpy.amin(data, axis=0)) == 0:
+    print('Minima add up to zero! -> HEALTHY PARTICIPANT ALERT!')
+    
+else:
+    print('Seems ok!')
+```
+
+    Minima add up to zero! -> HEALTHY PARTICIPANT ALERT!
