@@ -2040,148 +2040,139 @@ numpy.loadtxt('inflammation-01.csv', delimiter = ',')
            [0., 0., 1., ..., 1., 1., 0.]])
 
 
-### 9. Errors
+### 9. Defensive Programming
 
-## There are multiple errors in this code, to demonstrate different types of errors we can encounter while coding
+## There are several errors in this code to explain the best way to write in a defensive manner 
 
 ```python
-# This code has an intentional error. You can type it directly or use it for reference to understand the error message below.
-
-def favorite_ice_cream():
-    ice_creams = [
-        'chocolate',
-        'vanilla',
-        'strawberry'
-    ]
-    print(ice_creams[3])
-    
-favorite_ice_cream()
+numbers = [1.5, 2.3, 0.7, -0.001, 4.4]
+total = 0.0
+for num in numbers:
+    assert num > 0.0, 'Data should only contain positive values'
+    total += num
+print('Total is:', total)
 ```
 
 
     ---------------------------------------------------------------------------
 
-    IndexError                                Traceback (most recent call last)
+    AssertionError                            Traceback (most recent call last)
 
-    <ipython-input-1-a4fd78e3935c> in <module>
-          9     print(ice_creams[3])
-         10 
-    ---> 11 favorite_ice_cream()
-    
-
-    <ipython-input-1-a4fd78e3935c> in favorite_ice_cream()
-          7         'strawberry'
-          8     ]
-    ----> 9     print(ice_creams[3])
-         10 
-         11 favorite_ice_cream()
+    <ipython-input-3-41c7b8da6a3f> in <module>
+          2 total = 0.0
+          3 for num in numbers:
+    ----> 4     assert num > 0.0, 'Data should only contain positive values'
+          5     total += num
+          6 print('Total is:', total)
 
 
-    IndexError: list index out of range
+    AssertionError: Data should only contain positive values
 
 
 
 ```python
-def some_function():
-    msg = 'hello, world!'
-    print(msg)
-        return msg
+def normalize_rectangle(rect):
+    """Normalizes a rectangle so that it is at the origin and 1.0 units long on its longest axis.
+    Imput should be of the format (x0, y0, x1, y1).
+    (x0, y0) and (x1, y1) define the lower left and upper right corners of the rectangle respectively."""
+    assert len(rect) == 4, 'Rectangles must contain 4 coordinates'
+    x0, y0, x1, y1 = rect
+    assert x0 < x1, 'Invalid X coordinates'
+    assert y0 < y1, 'Invalid Y coordinates'
+    
+    dx = x1 - x0
+    dy = y1 - y0
+    if dx > dy:
+        scaled = dx / dy
+        upper_x, upper_y = 1.0 , scaled
+    else:
+        scaled = dx / dy
+        upper_x, upper_y = scaled, 1.0
+        
+    assert 0 < upper_x <= 1.0, 'Calculated upper X coordinate invalid'
+    assert 0 < upper_y <= 1.0, 'Calculated upper Y coordinate invalid'
+    
+    return (0, 0, upper_x, upper_y)
 ```
 
 
-      File "<ipython-input-9-8be9a7a380a2>", line 4
-        return msg
-        ^
-    IndentationError: unexpected indent
-
-
-
-
 ```python
-print(a)
+print(normalize_rectangle( (0.0, 1.0, 2.0) ))
 ```
 
 
     ---------------------------------------------------------------------------
 
-    NameError                                 Traceback (most recent call last)
+    AssertionError                            Traceback (most recent call last)
 
-    <ipython-input-10-bca0e2660b9f> in <module>
-    ----> 1 print(a)
+    <ipython-input-7-f9d109085db1> in <module>
+    ----> 1 print(normalize_rectangle( (0.0, 1.0, 2.0) ))
     
 
-    NameError: name 'a' is not defined
+    <ipython-input-6-28ebde4c52a6> in normalize_rectangle(rect)
+          3     Imput should be of the format (x0, y0, x1, y1).
+          4     (x0, y0) and (x1, y1) define the lower left and upper right corners of the rectangle respectively."""
+    ----> 5     assert len(rect) == 4, 'Rectangles must contain 4 coordinates'
+          6     x0, y0, x1, y1 = rect
+          7     assert x0 < x1, 'Invalid X coordinates'
+
+
+    AssertionError: Rectangles must contain 4 coordinates
 
 
 
 ```python
-print('hello')
-```
-
-    hello
-
-
-
-```python
-# If count is not defined, an error will appear
-count = 0
-
-for number in range(10):
-    count = count + number
-print('The count is:', count)
-```
-
-    The count is: 45
-
-
-
-```python
-letters = ['a', 'b', 'c']
-
-print('Letter #1 is', letters[0])
-print('Letter #2 is', letters[1])
-print('Letter #3 is', letters[2])
-print('Letter #4 is', letters[3])
-```
-
-    Letter #1 is a
-    Letter #2 is b
-    Letter #3 is c
-
-
-
-    ---------------------------------------------------------------------------
-
-    IndexError                                Traceback (most recent call last)
-
-    <ipython-input-7-9127bae7a87f> in <module>
-          4 print('Letter #2 is', letters[1])
-          5 print('Letter #3 is', letters[2])
-    ----> 6 print('Letter #4 is', letters[3])
-    
-
-    IndexError: list index out of range
-
-
-
-```python
-file_handle = open('myfiles.txt', 'r')
-
+print(normalize_rectangle( (4.0, 2.0, 1.0, 5.0) ))
 ```
 
 
     ---------------------------------------------------------------------------
 
-    FileNotFoundError                         Traceback (most recent call last)
+    AssertionError                            Traceback (most recent call last)
 
-    <ipython-input-25-f4cc119d5079> in <module>
-    ----> 1 file_handle = open('myfiles.txt', 'r')
+    <ipython-input-8-f7e0d48bdfd0> in <module>
+    ----> 1 print(normalize_rectangle( (4.0, 2.0, 1.0, 5.0) ))
     
 
-    FileNotFoundError: [Errno 2] No such file or directory: 'myfiles.txt'
+    <ipython-input-6-28ebde4c52a6> in normalize_rectangle(rect)
+          5     assert len(rect) == 4, 'Rectangles must contain 4 coordinates'
+          6     x0, y0, x1, y1 = rect
+    ----> 7     assert x0 < x1, 'Invalid X coordinates'
+          8     assert y0 < y1, 'Invalid Y coordinates'
+          9 
+
+
+    AssertionError: Invalid X coordinates
 
 
 
 ```python
-
+print(normalize_rectangle( (0.0, 0.0, 1.0, 5.0) ))
 ```
+
+    (0, 0, 0.2, 1.0)
+
+
+
+```python
+print(normalize_rectangle( (0.0, 0.0, 5.0, 1.0)))
+```
+
+
+    ---------------------------------------------------------------------------
+
+    AssertionError                            Traceback (most recent call last)
+
+    <ipython-input-11-83721d2716e7> in <module>
+    ----> 1 print(normalize_rectangle( (0.0, 0.0, 5.0, 1.0)))
+    
+
+    <ipython-input-6-28ebde4c52a6> in normalize_rectangle(rect)
+         18 
+         19     assert 0 < upper_x <= 1.0, 'Calculated upper X coordinate invalid'
+    ---> 20     assert 0 < upper_y <= 1.0, 'Calculated upper Y coordinate invalid'
+         21 
+         22     return (0, 0, upper_x, upper_y)
+
+
+    AssertionError: Calculated upper Y coordinate invalid
