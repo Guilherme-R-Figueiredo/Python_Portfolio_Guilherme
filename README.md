@@ -2040,9 +2040,9 @@ numpy.loadtxt('inflammation-01.csv', delimiter = ',')
            [0., 0., 1., ..., 1., 1., 0.]])
 
 
-### 9. Defensive Programming
+## 9. Defensive Programming
 
-## There are several errors in this code to explain the best way to write in a defensive manner 
+### There are several errors in this code to explain the best way to write in a defensive manner 
 
 ```python
 numbers = [1.5, 2.3, 0.7, -0.001, 4.4]
