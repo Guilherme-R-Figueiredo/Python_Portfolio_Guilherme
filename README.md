@@ -3,7 +3,7 @@ This is the portfolio of python code that I learned during Grad Bioinformatics P
 
 ## 1. Jupyter Notebooks
 
-### This code represents part 1 and 2 on how to use Jupyter Notebooks
+  ### 1.1. This code represents part 1 and 2 on how to use Jupyter Notebooks
 
 ```python
 %matplotlib inline
@@ -454,7 +454,7 @@ fig.tight_layout()
 
 ## 2. Python Fundamentals
 
-### This code shows that Python can be used as a calculator, and it is able to save different types of variables
+  ### 2.1. This code shows that Python can be used as a calculator, and it is able to save different types of variables
 
 ```python
 # Any python interpreter can be used as a calculator:
@@ -592,7 +592,7 @@ print ('weight in kilograms is now:', weight_kg)
 
 ## 3. Analyzing Patient Data
 
-### This code represents Part 1 and 2, and shows inflammation data from multiple patients
+  ### 3.1. This code represents part 1 and 2, and shows inflammation data from multiple patients
 
 ```python
 import numpy
@@ -825,7 +825,7 @@ print(numpy.mean(data, axis = 1))
      5.95  6.275 5.7   6.1   6.825 5.975 6.725 5.7   6.25  6.4   7.05  5.9  ]
 
 
-### This code represents part 3, which corresponds to Data Visualization
+  ### 3.2. This code represents part 3, which corresponds to Data Visualization
 
 ```python
 import numpy
@@ -905,7 +905,7 @@ matplotlib.pyplot.show()
 
 ## 4. Lists
 
-### This code explains how to store values in Lists
+  ### 4.1. This code explains how to store values in Lists
 
 ```python
 odds = [1, 3, 5, 7]
@@ -1057,7 +1057,7 @@ print('Omitting ending index:', sond)
 
 ## 5. Loops
 
-### This code shows how to use Loops. There is an error code in this section, only to show what would happen if we request an index that is out of the range of a list
+  ### 5.1. This code shows how to use Loops. There is an error code in this section, only to show what would happen if we request an index that is out of the range of a list
 
 ```python
 odds = [1,3,5,7]
@@ -1171,7 +1171,7 @@ print(len(name))
 
 ## 6. Multiple Files
 
-### This code demonstrates how we can work with multiples files easier
+  ### 6.1. This code demonstrates how we can work with multiples files easier
 
 ```python
 import glob
@@ -1235,7 +1235,7 @@ for filename in filenames:
 
 ## 7. Making Choices
 
-### This code represents part 1
+  ### 7.1. This code represents part 1
 
 ```python
 num = 37
@@ -1299,7 +1299,7 @@ else:
 
     at least one part is true
 
-### This code represents part 2
+  ### 7.2. This code represents part 2
 
 ```python
 import numpy
@@ -1364,7 +1364,7 @@ else:
 
 ## 8. Functions
 
-### This code represents part 1 on how to create functions. There is an error on this code to show that a variable that is defined inside a function, is not permanent.
+  ### 8.1. This code represents part 1 on how to create functions. There is an error on this code to show that a variable that is defined inside a function, is not permanent.
 
 ```python
 fahrenheit_val = 99
@@ -1515,7 +1515,7 @@ print_temperatures()
     Temperature in Fahrenheit was: 212.0
     Temperature in Kelvin was: 373.15
 
-### This code represents parts 2, 3 and 4 on how to create functions. There is an error on this code, to show that it is necessary to define what is a delimiter.
+  ### 8.2. This code represents parts 2, 3 and 4 on how to create functions. There is an error on this code, to show that it is necessary to define what is a delimiter.
 
 ```python
 import numpy
@@ -2042,7 +2042,7 @@ numpy.loadtxt('inflammation-01.csv', delimiter = ',')
 
 ## 9. Defensive Programming
 
-### There are several errors in this code to explain the best way to write in a defensive manner 
+  ### 9.1. There are several errors in this code to explain the best way to write in a defensive manner, by adding assertions to the code in order to check for errors while the code is being written
 
 ```python
 numbers = [1.5, 2.3, 0.7, -0.001, 4.4]
@@ -2176,3 +2176,159 @@ print(normalize_rectangle( (0.0, 0.0, 5.0, 1.0)))
 
 
     AssertionError: Calculated upper Y coordinate invalid
+
+
+## 10. Transcription
+
+  ### 10.1. This code is used to transcribe a DNA sequence into an RNA sequence
+
+```python
+# Prompt the user to enter the input FASTA file name
+
+input_file_name = input ("Enter the name of the input FASTA file: ")
+```
+
+    Enter the name of the input FASTA file:  Ubiquitin.txt
+
+
+
+```python
+# Open the input FASTA file and read the DNA sequence
+
+with open (input_file_name, "r") as input_file:
+    dna_sequence = ""
+    for line in input_file:
+        if line.startswith(">"):
+            continue
+        dna_sequence += line.strip()
+```
+
+
+```python
+# Transcribe the DNA to RNA
+
+rna_sequence = ""
+for nucleotide in dna_sequence:
+    if nucleotide == "T":
+        rna_sequence += "U"
+    else:
+        rna_sequence += nucleotide
+```
+
+
+```python
+# Prompt the user to enter the output file name
+
+output_file_name = input ("Enter the name of the output file: ")
+```
+
+    Enter the name of the output file:  Ubiquitin_RNA.txt
+
+
+
+```python
+# Save the RNA sequence to a text file
+
+with open (output_file_name, "w") as output_file:
+    output_file.write(rna_sequence)
+    print ("The RNA sequence has been saved to (output_file_name)")
+```
+
+    The RNA sequence has been saved to (output_file_name)
+
+
+
+```python
+print (rna_sequence)
+```
+
+    AUGCAGAUCUUCGUGAAAACCCUUACCGGCAAGACCAUCACCCUUGAGGUGGAGCCCAGUGACACCAUCGAAAAUGUGAAGGCCAAGAUCCAGGAUAAGGAAGGCAUCCCUCCCGACCAGCAGAGGCUCAUCUUUGCAGGCAAGCAGCUGGAAGAUGGCCGUACUCUUUCUGACUACAACAUCCAGAAGGAGUCGACCCUGCAUCUGGUCCUGCGUCUGAGAGGUGGUAUGCAGAUCUUCGUGAAGACCCUGACUGGCAAGACCAUCACCCUGGAAGUGGAGCCCAGUGACACCAUCGAAAAUGUGAAGGCCAAGAUCCAGGAUAAAGAAGGCAUCCCUCCCGACCAGCAGAGGCUCAUCUUUGCAGGCAAGCAGCUGGAAGAUGGCCGCACUCUUUCUGACUACAACAUCCAGAAGGAGUCGACCCUGCACCUGGUCCUGCGUCUGAGAGGUGGUAUGCAGAUCUUCGUGAAGACCCUGACCGGCAAGACCAUCACUCUGGAGGUGGAGCCCAGUGACACCAUCGAAAAUGUGAAGGCCAAGAUCCAAGAUAAAGAAGGCAUCCCUCCCGACCAGCAGAGGCUCAUCUUUGCAGGCAAGCAGCUGGAAGAUGGCCGCACUCUUUCUGACUACAACAUCCAGAAAGAGUCGACCCUGCACCUGGUCCUGCGCCUGAGGGGUGGCUGUUAA
+
+## 11. Translation
+
+  ### 11.1. This code is used to translate an RNA sequence into an amino acid sequence
+
+```python
+# Prompt the user to enter the input RNA file name
+
+input_file_name = input ("Enter the name of the input RNA file:")
+```
+
+    Enter the name of the input RNA file: Ubiquitin_RNA.txt
+
+
+
+```python
+# Open the input RNA file and read the RNA sequence
+
+with open (input_file_name, "r") as input_file:
+    rna_sequence = input_file.read().strip()
+```
+
+
+```python
+# Define the codon table
+
+codon_table = {
+    "UUU": "F", "UUC": "F", "UUA": "L", "UUG": "L",
+    "CUU": "L", "CUC": "L", "CUA": "L", "CUG": "L",
+    "AUU": "I", "AUC": "I", "AUA": "I", "AUG": "M",
+    "GUU": "V", "GUC": "V", "GUA": "V", "GUG": "V",
+    "UCU": "S", "UCC": "S", "UCA": "S", "UCG": "S",
+    "CCU": "P", "CCC": "P", "CCA": "P", "CCG": "P",
+    "ACU": "T", "ACC": "T", "ACA": "T", "ACG": "T",
+    "GCU": "A", "GCC": "A", "GCA": "A", "GCG": "A",
+    "UAU": "Y", "UAC": "Y", "UAA": "*", "UAG": "*",
+    "CAU": "H", "CAC": "H", "CAA": "Q", "CAG": "Q",
+    "AAU": "N", "AAC": "N", "AAA": "K", "AAG": "K",
+    "GAU": "D", "GAC": "D", "GAA": "E", "GAG": "E",
+    "UGU": "C", "UGC": "C", "UGA": "*", "UGG": "W",
+    "CGU": "R", "CGC": "R", "CGA": "R", "CGG": "R",
+    "AGU": "S", "AGC": "S", "AGA": "R", "AGG": "R",
+    "GGU": "G", "GGC": "G", "GGA": "G", "GGG": "G"
+
+}
+```
+
+
+```python
+# Translate RNA to protein
+
+protein_sequence = " "
+for i in range (0, len(rna_sequence), 3):
+    codon = rna_sequence[i:i+3]
+    if len(codon) == 3:
+        amino_acid = codon_table[codon]
+        if amino_acid == "*":
+            break
+        protein_sequence += amino_acid
+```
+
+
+```python
+# Prompt the user to enter the output file name
+
+output_file_name = input (" Enter the name of the output file: ")
+```
+
+     Enter the name of the output file:  Ubiquitin_Protein.txt
+
+
+
+```python
+# Save the protein sequence to a text file
+
+with open (output_file_name, "w") as output_file:
+    output_file.write (protein_sequence)
+    print (f"The protein sequence has been saved to {output_file_name}")
+```
+
+    The protein sequence has been saved to Ubiquitin_Protein.txt
+
+
+
+```python
+print (protein_sequence)
+```
+
+     MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGGMQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGGMQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGGC
